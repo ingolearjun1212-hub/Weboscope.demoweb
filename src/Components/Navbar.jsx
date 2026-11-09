@@ -126,7 +126,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setISopen(false)}
-                className="py-4   text-black   hover:bg-white/20 hover:backdrop-blur-md bg-white/50 backdrop-blur-lg  rounded-b-full font-extrabold transition"
+                className="py-4   text-black   text-center  hover:bg-white/20 hover:backdrop-blur-md bg-white/50 backdrop-blur-lg  rounded-b-full font-extrabold transition"
               >
                 {link.name}
               </a>
