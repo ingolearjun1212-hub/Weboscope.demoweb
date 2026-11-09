@@ -43,9 +43,9 @@ const Navbar = () => {
 
 
 
-        <div className='max-w-7xl mx-auto px-5 z-50 top-0 bg-black/20 backdrop-blur-sm absolute w-full '> 
+        <div className='max-w-7xl mx-auto px-5 z-50 top-0 bg-black/20 backdrop-blur-sm absolute w-full  '> 
 
-            <div className='flex items-center justify-between gap-5'>
+            <div className='flex items-center justify-between gap-5 fixed top-0 left-0'>
 
             <div>
                 <img
