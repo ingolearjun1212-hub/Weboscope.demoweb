@@ -19,7 +19,7 @@ const Navbar = () => {
 
     <>
 
-    <nav className=' w-full shadow-md     <section relative  h-screen '>
+    <nav className=' w-full shadow-md   relative  h-screen '>
 
 
       <div className='h-full w-full relitive z-10'>
@@ -32,7 +32,7 @@ const Navbar = () => {
           muted
           autoPlay
           
-          className='w-full md:h-full object-cover h-full'
+          className='w-full  object-cover h-full'
 
          />
 
@@ -45,7 +45,7 @@ const Navbar = () => {
 
         <div className='max-w-7xl mx-auto px-5 z-50 top-0 bg-black/20 backdrop-blur-sm absolute w-full  '> 
 
-            <div className='flex items-center justify-between gap-5 fixed top-0 left-0'>
+            <div className='flex items-center justify-between gap-5 '>
 
             <div>
                 <img
