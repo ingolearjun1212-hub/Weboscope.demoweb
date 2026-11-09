@@ -144,7 +144,7 @@ const filteredDishes = menuData.filter((dish) =>
 
 
 
-        <div className='max-w-7xl mx-auto px-5 z-50 top-0 bg-black/20 backdrop-blur-sm absolute w-full  '> 
+        <div className='max-w-7xl mx-auto px-5 z-50 top-0 bg-black/20 backdrop-blur-sm absolute w-full p-5 '> 
 
             <div className='flex items-center justify-between gap-5 '>
 
