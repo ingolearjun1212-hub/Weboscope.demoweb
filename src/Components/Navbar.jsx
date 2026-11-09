@@ -19,7 +19,7 @@ const Navbar = () => {
 
     <>
 
-    <nav className=' w-full shadow-md  h-full  bg-amber-400'>
+    <nav className=' w-full shadow-md    bg-amber-400 <section relative  h-screen overflow-hidden">'>
 
 
       <div className='h-full w-full relitive z-10 bg-red-500'>
@@ -37,17 +37,7 @@ const Navbar = () => {
          />
 
 
-           <video 
-         
-          src='https://res.cloudinary.com/dgdxl274u/video/upload/v1794212406/istockphoto-2259519015-640_adpp_is_ayalc3.mp4'
           
-          loop 
-          muted
-          autoPlay
-          
-          className='w-full md:h-full object-cover h-full'
-
-         />
           </div>
          
 
