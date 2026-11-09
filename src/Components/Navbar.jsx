@@ -4,7 +4,7 @@ import { Menu, X, Search } from "lucide-react"
 const Navbar = () => {
 
   const [isOpen,setISopen] = useState(false)   
-  const [search,setSearch] = useState()
+  const [search,setSearch] = useState('')
 
 
     const navLinks = [
@@ -14,6 +14,107 @@ const Navbar = () => {
     { name: "Gallery", href: "#gallery" },
     { name: "Contact", href: "#contact" },
   ];
+
+
+
+  
+const menuData = [
+  {
+    id: 1,
+    name: "Paneer Butter Masala",
+    category: "Paneer",
+    price: 250,
+  },
+  {
+    id: 2,
+    name: "Shahi Paneer",
+    category: "Paneer",
+    price: 280,
+  },
+  {
+    id: 3,
+    name: "Kadai Paneer",
+    category: "Paneer",
+    price: 260,
+  },
+  {
+    id: 4,
+    name: "Veg Burger",
+    category: "Burger",
+    price: 120,
+  },
+  {
+    id: 5,
+    name: "Cheese Burger",
+    category: "Burger",
+    price: 160,
+  },
+  {
+    id: 6,
+    name: "Chicken Burger",
+    category: "Burger",
+    price: 180,
+  },
+  {
+    id: 7,
+    name: "Margherita Pizza",
+    category: "Pizza",
+    price: 220,
+  },
+  {
+    id: 8,
+    name: "Cheese Pizza",
+    category: "Pizza",
+    price: 280,
+  },
+  {
+    id: 9,
+    name: "Farmhouse Pizza",
+    category: "Pizza",
+    price: 320,
+  },
+  {
+    id: 10,
+    name: "Veg Sandwich",
+    category: "Sandwich",
+    price: 100,
+  },
+  {
+    id: 11,
+    name: "Cheese Sandwich",
+    category: "Sandwich",
+    price: 140,
+  },
+  {
+    id: 12,
+    name: "French Fries",
+    category: "Snacks",
+    price: 100,
+  },
+  {
+    id: 13,
+    name: "Paneer Tikka",
+    category: "Starter",
+    price: 220,
+  },
+  {
+    id: 14,
+    name: "Cold Coffee",
+    category: "Drinks",
+    price: 120,
+  },
+  {
+    id: 15,
+    name: "Chocolate Milkshake",
+    category: "Drinks",
+    price: 150,
+  },
+];
+
+
+const filteredDishes = menuData.filter((dish) =>
+  dish.name.toLowerCase().includes(search.toLowerCase())
+);
 
   return (
 
@@ -61,33 +162,45 @@ const Navbar = () => {
             </div>
 
 
-              <div className='flex gap-5 py-5 '>
-                <form 
-                 onSubmit={(e)=>{
-                  
-                    e.preventDefault();
-                    console.log('Searching:', Search);
+            <div className="relative">
 
-                 }}
-                 className='flex items-center flex-1   border
-                  border-gray-200 rounded-full px-4 gap-2 hover:bg-white/20'
-                
-                
-                
-                >
+  <form
+    onSubmit={(e) => e.preventDefault()}
+    className="flex items-center border border-gray-200 rounded-full px-4 gap-2 py-2"
+  >
+    <Search size={19} className="text-white" />
 
-                 <search size={19} className='text-white shrink-0 '/>
+    <input
+      type="search"
+      placeholder="Search dishes..."
+      value={search}
+      onChange={(e) => setSearch(e.target.value)}
+      className="w-full bg-transparent outline-none text-sm text-white placeholder:text-white"
+    />
+  </form>
 
-                 <input
-                 
-                 type='search'
-                 placeholder='search dishes...'
-                 value={search}
-                 onChange={(e)=> setSearch(e.target.value)}
-                 className='w-full bg-transparent outline-none text-sm text-white  placeholder:text-white'/>
+  {search.trim() && (
+    <div className="absolute top-full left-0 w-full bg-white/80 rounded-xl shadow-lg mt-2 z-50 ">
 
-                 
-                </form>
+      {filteredDishes.length > 0 ? (
+
+        filteredDishes.map((dish) => (
+          <div key={dish.id} className="p-3 border-b text-black">
+
+            <h3>{dish.name}</h3>
+            <p>{dish.category} - ₹{dish.price}</p>
+
+          </div>
+        ))
+
+      ) : (
+        <p className="p-3 text-black font-bold">No dishes found!</p>
+      )}
+
+    </div>
+  )}
+
+</div>
               
 
 
@@ -126,7 +239,7 @@ const Navbar = () => {
                 key={link.name}
                 href={link.href}
                 onClick={() => setISopen(false)}
-                className="py-4   text-black   text-center  hover:bg-white/20 hover:backdrop-blur-md bg-white/50 backdrop-blur-lg  rounded-b-full font-extrabold transition"
+                className="py-4 md:text-[#972828] text-black  text-center hover:text-white hover:bg-[#280905] hover:backdrop-blur-md bg-white/50 backdrop-blur-lg  rounded-b-full font-extrabold transition duration-1000 hover:scale-105"
               >
                 {link.name}
               </a>
@@ -141,7 +254,7 @@ const Navbar = () => {
       </div>
 
 
-       </div>
+       
 
     </nav>
 
