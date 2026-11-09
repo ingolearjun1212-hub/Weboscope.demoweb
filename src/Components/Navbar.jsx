@@ -19,10 +19,10 @@ const Navbar = () => {
 
     <>
 
-    <nav className=' w-full shadow-md    bg-amber-400 <section relative  h-screen overflow-hidden">'>
+    <nav className=' w-full shadow-md     <section relative  h-screen '>
 
 
-      <div className='h-full w-full relitive z-10 bg-red-500'>
+      <div className='h-full w-full relitive z-10'>
          
          <video 
          
