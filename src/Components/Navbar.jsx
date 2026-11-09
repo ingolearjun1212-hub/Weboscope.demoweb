@@ -32,7 +32,20 @@ const Navbar = () => {
           muted
           autoPlay
           
-          className='w-full h-full'
+          className='w-full md:h-full object-cover h-full'
+
+         />
+
+
+           <video 
+         
+          src='https://res.cloudinary.com/dgdxl274u/video/upload/v1794212406/istockphoto-2259519015-640_adpp_is_ayalc3.mp4'
+          
+          loop 
+          muted
+          autoPlay
+          
+          className='w-full md:h-full object-cover h-full'
 
          />
           </div>
@@ -50,6 +63,11 @@ const Navbar = () => {
                src='https://res.cloudinary.com/dgdxl274u/image/upload/v1794212731/ChatGPT_Image_Nov_4_2026_05_25_14_PM_qfvetl.png'
                className='w-full h-11 bg-black rounded-full p-1  '
             />
+          
+
+         
+             
+              
             </div>
 
 
@@ -61,7 +79,7 @@ const Navbar = () => {
                     console.log('Searching:', Search);
 
                  }}
-                 className='flex items-center flex-1 max-w-xl h-11  border
+                 className='flex items-center flex-1   border
                   border-gray-200 rounded-full px-4 gap-2 hover:bg-white/20'
                 
                 
