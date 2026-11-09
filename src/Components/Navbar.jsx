@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Menu, X, Search } from "lucide-react";
+import { Menu, X, Search } from "lucide-react"
 
 const Navbar = () => {
 
@@ -26,7 +26,7 @@ const Navbar = () => {
          
          <video 
          
-          src='public/hero.mp4'
+          src='https://res.cloudinary.com/dgdxl274u/video/upload/v1794212406/istockphoto-2259519015-640_adpp_is_ayalc3.mp4'
           
           loop 
           muted
@@ -47,7 +47,7 @@ const Navbar = () => {
             <div>
                 <img
                
-               src='public/logo.png'
+               src='https://res.cloudinary.com/dgdxl274u/image/upload/v1794212731/ChatGPT_Image_Nov_4_2026_05_25_14_PM_qfvetl.png'
                className='w-full h-11 bg-black rounded-full p-1  '
             />
             </div>
