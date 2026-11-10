@@ -123,7 +123,7 @@ const filteredDishes = menuData.filter((dish) =>
     <nav className=' w-full shadow-md   relative  h-screen '>
 
 
-      <div className='h-full w-full relitive z-10'>
+      <div className='h-full w-full relative z-10'>
          
          <video 
          
