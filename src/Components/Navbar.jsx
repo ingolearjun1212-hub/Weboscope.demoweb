@@ -123,7 +123,7 @@ const filteredDishes = menuData.filter((dish) =>
     <nav className=' w-full shadow-md   relative  h-screen '>
 
 
-      <div className='h-full w-full relative z-10'>
+      <div className=' w-full h-full relative z-10'>
          
          <video 
          
@@ -133,7 +133,7 @@ const filteredDishes = menuData.filter((dish) =>
           muted
           autoPlay
           
-          className='w-full  object-cover h-full'
+          className='w-full object-cover h-full '
 
          />
 
@@ -144,7 +144,7 @@ const filteredDishes = menuData.filter((dish) =>
 
 
 
-        <div className='max-w-7xl mx-auto px-5 z-50 top-0 bg-black/20 backdrop-blur-sm absolute w-full p-5 '> 
+        <div className='max-w-7xl mx-auto  z-50 top-0 bg-black/20 backdrop-blur-sm absolute w-full py-2 '> 
 
             <div className='flex items-center justify-between gap-5 '>
 
@@ -152,7 +152,7 @@ const filteredDishes = menuData.filter((dish) =>
                 <img
                
                src='https://res.cloudinary.com/dgdxl274u/image/upload/v1794212731/ChatGPT_Image_Nov_4_2026_05_25_14_PM_qfvetl.png'
-               className='w-full h-11 bg-black rounded-full p-1  '
+               className="w-full h-11 bg-black rounded-full ml-2 "
             />
           
              
@@ -160,16 +160,19 @@ const filteredDishes = menuData.filter((dish) =>
             </div>
 
 
-      <div className='absolute z-30 text-amber-600 top-40 justify-center flex items-center flex-col'>
+      <div className='absolute z-30 text-amber-600 top-40 justify-center flex items-center flex-col  bg-white/50 backdrop-blur-sm rounded-4xl p-5' >
 
         <p className='text-amber-600 text-5xl bg-white/30 rounded-4xl px-4 py-1  font-light text-center font-serif  '>WELCOME TO <span  className='text-amber-900 '>OSCOPE RESTAURANT</span> </p>
 
 
         <p className=' bg-black/40 rounded-3xl text-4xl text-white/90  font-mono font-bold mt-2 text-center'> Where Every Bite Tells a Story.</p>
 
-        <p className='bg-white/50 text-amber-950 text-center mt-4 text-2xl rounded-4xl px-5 py-1 font-sans font-bold '> Experience exceptional flavors, delicious
+        <p className='bg-white/50 text-amber-950 relative text-center mt-4 text-2xl rounded-4xl px-5 py-1 font-sans font-bold '> Experience exceptional flavors, delicious
       cuisine and unforgettable moments with us.</p>
 
+
+        
+      
       </div>
 
 
@@ -177,8 +180,7 @@ const filteredDishes = menuData.filter((dish) =>
 
   <form
     onSubmit={(e) => e.preventDefault()}
-    className="flex items-center border border-gray-200 rounded-full px-4 gap-2 py-2"
-  >
+    className="flex items-center border border-gray-200 rounded-full px-4 gap-2 py-2" >
     <Search size={19} className="text-white" />
 
     <input
@@ -250,7 +252,7 @@ const filteredDishes = menuData.filter((dish) =>
                 key={link.name}
                 href={link.href}
                 onClick={() => setISopen(false)}
-                className="py-4 md:text-[#972828] text-black  text-center hover:text-white hover:bg-[#280905] hover:backdrop-blur-md bg-white/50 backdrop-blur-lg  rounded-b-full font-extrabold transition duration-1000 hover:scale-105"
+                className="py-4  z-40 md:text-[#972828] text-black  text-center hover:text-white hover:bg-[#280905] hover:backdrop-blur-md bg-white/70 backdrop-blur-lg  rounded-b-full font-extrabold transition duration-1000 hover:scale-105"
               >
                 {link.name}
               </a>
