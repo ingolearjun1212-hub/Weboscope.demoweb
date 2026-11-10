@@ -155,11 +155,22 @@ const filteredDishes = menuData.filter((dish) =>
                className='w-full h-11 bg-black rounded-full p-1  '
             />
           
-
-         
              
               
             </div>
+
+
+      <div className='absolute z-30 text-amber-600 top-40 justify-center flex items-center flex-col'>
+
+        <p className='text-amber-600 text-5xl bg-white/30 rounded-4xl px-4 py-1  font-light text-center font-serif  '>WELCOME TO <span  className='text-amber-900 '>OSCOPE RESTAURANT</span> </p>
+
+
+        <p className=' bg-black/40 rounded-3xl text-4xl text-white/90  font-mono font-bold mt-2 text-center'> Where Every Bite Tells a Story.</p>
+
+        <p className='bg-white/50 text-amber-950 text-center mt-4 text-2xl rounded-4xl px-5 py-1 font-sans font-bold '> Experience exceptional flavors, delicious
+      cuisine and unforgettable moments with us.</p>
+
+      </div>
 
 
             <div className="relative">
