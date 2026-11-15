@@ -1,280 +1,136 @@
-import React, { useState } from 'react'
-import { Menu, X, Search } from "lucide-react"
 
-const Navbar = () => {
+import React from 'react'
+import { useState } from 'react'
+import { Search } from 'lucide-react'
 
-  const [isOpen,setISopen] = useState(false)   
-  const [search,setSearch] = useState('')
-
-
-    const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Menu", href: "#menu" },
-    { name: "Gallery", href: "#gallery" },
-    { name: "Contact", href: "#contact" },
-  ];
+function Navbar() {
 
 
+ const [search, setSearch] = useState('')
+ const [showSuggestions, setShowSuggestions] = useState(false)
 
-  
-const menuData = [
+  const foods = [
   {
-    id: 1,
-    name: "Paneer Butter Masala",
-    category: "Paneer",
-    price: 250,
+    name: "Pizza",
+    price: 199,
+    image: "image.png"
   },
   {
-    id: 2,
-    name: "Shahi Paneer",
-    category: "Paneer",
-    price: 280,
+    name: "Pineapple Pizza",
+    price: 249,
+    image: "https://images.unsplash.com/photo- pineapple"
   },
   {
-    id: 3,
-    name: "Kadai Paneer",
-    category: "Paneer",
-    price: 260,
+    name: "Paneer Pizza",
+    price: 299,
+    image: "https://images.unsplash.com/photo- paneer"
   },
   {
-    id: 4,
-    name: "Veg Burger",
-    category: "Burger",
-    price: 120,
-  },
-  {
-    id: 5,
-    name: "Cheese Burger",
-    category: "Burger",
-    price: 160,
-  },
-  {
-    id: 6,
-    name: "Chicken Burger",
-    category: "Burger",
-    price: 180,
-  },
-  {
-    id: 7,
-    name: "Margherita Pizza",
-    category: "Pizza",
-    price: 220,
-  },
-  {
-    id: 8,
-    name: "Cheese Pizza",
-    category: "Pizza",
-    price: 280,
-  },
-  {
-    id: 9,
-    name: "Farmhouse Pizza",
-    category: "Pizza",
-    price: 320,
-  },
-  {
-    id: 10,
-    name: "Veg Sandwich",
-    category: "Sandwich",
-    price: 100,
-  },
-  {
-    id: 11,
-    name: "Cheese Sandwich",
-    category: "Sandwich",
-    price: 140,
-  },
-  {
-    id: 12,
-    name: "French Fries",
-    category: "Snacks",
-    price: 100,
-  },
-  {
-    id: 13,
-    name: "Paneer Tikka",
-    category: "Starter",
-    price: 220,
-  },
-  {
-    id: 14,
-    name: "Cold Coffee",
-    category: "Drinks",
-    price: 120,
-  },
-  {
-    id: 15,
-    name: "Chocolate Milkshake",
-    category: "Drinks",
-    price: 150,
-  },
-];
+    name: "Burger",
+    price: 99,
+    image: "https://images.unsplash.com/photo- burger"
+  }
+]
 
-
-const filteredDishes = menuData.filter((dish) =>
-  dish.name.toLowerCase().includes(search.toLowerCase())
-);
+  const filteredFoods = foods.filter((food)=>
+    food.name.toLowerCase().includes(search.toLowerCase())
+)
 
   return (
-
-    <>
-
-    <nav className=' w-full shadow-md   relative  h-screen '>
+    <section className='bg-white/2 backdrop-blur-sm h-20 w-full   absolute '>
+      
 
 
-      <div className=' w-full h-full relative z-10'>
-         
-         <video 
-         
-          src='https://res.cloudinary.com/dgdxl274u/video/upload/v1794212406/istockphoto-2259519015-640_adpp_is_ayalc3.mp4'
-          
-          loop 
-          muted
-          autoPlay
-          
-          className='w-full object-cover h-full '
+     <div className='flex justify-between items-center h-ful w-fulll px-5 py-5'> 
+    
+    <div className='flex items-center'>
+      <img
+       
 
-         />
-
-
-          
-          </div>
-         
-
-
-
-        <div className='max-w-7xl mx-auto  z-50 top-0 bg-black/20 backdrop-blur-sm absolute w-full py-2 '> 
-
-            <div className='flex items-center justify-between gap-5 '>
-
-            <div>
-                <img
-               
-               src='https://res.cloudinary.com/dgdxl274u/image/upload/v1794212731/ChatGPT_Image_Nov_4_2026_05_25_14_PM_qfvetl.png'
-               className="w-full h-11 bg-black rounded-full ml-2 "
-            />
-          
-             
-              
-            </div>
-
-
-      <div className='absolute z-30 text-amber-600 top-40 justify-center flex items-center flex-col  bg-white/50 backdrop-blur-sm rounded-4xl p-5' >
-
-        <p className='text-amber-600 text-5xl bg-white/30 rounded-4xl px-4 py-1  font-light text-center font-serif  '>WELCOME TO <span  className='text-amber-900 '>OSCOPE RESTAURANT</span> </p>
-
-
-        <p className=' bg-black/40 rounded-3xl text-4xl text-white/90  font-mono font-bold mt-2 text-center'> Where Every Bite Tells a Story.</p>
-
-        <p className='bg-white/50 text-amber-950 relative text-center mt-4 text-2xl rounded-4xl px-5 py-1 font-sans font-bold '> Experience exceptional flavors, delicious
-      cuisine and unforgettable moments with us.</p>
-
-
+       src='https://res.cloudinary.com/dgdxl274u/image/upload/v1794212731/ChatGPT_Image_Nov_4_2026_05_25_14_PM_qfvetl.png'
+       className='rounded-full h-11 bg-black p-1 '
+      
+      />
+    </div>
+    
+    <div className='flex text-white justify-baseline items-center 
+    border border-white rounded-full px-3 py-2  gap-2'>
+    
         
+
+<Search  size={20} />
+
+
+<input
+
+type='text'
+placeholder='search food...'
+value={search}
+onChange={(e)=> {setSearch(e.target.value)
+setShowSuggestions(true)
+
+}}
+className='w-full p-1  rounded-full outline-none placeholder:text-white placeholder:text-sm'
+
+
+
+/>
+
+
+
+
+
+{showSuggestions && search.length > 0 && filteredFoods.length > 0 && (
+<div className='bg-blue-500 mt-2 rounded-xl shadow-md ' >
+
+
+{filteredFoods.map((food,index)=>(
+
+ <div
+ 
+ key={index}
+ onClick={()=>{setSearch(food.name)
+   setShowSuggestions(false)
+
+}}
+
+ className='p-3 hover:bg-gray-100 cursor-pointer '>
+
+
+     <img
+      src={food.image}
+      alt={food.name}
+      className=' flex items-center w-14 h-14 object-cover rounded-lg'
+    />
+
+    <div>
+      <h3 className='font-semibold'>{food.name}</h3>
+      <p className='bg-black'>₹{food.price}</p>
+    </div>
+
+ 
+
+
+  </div>
+
+
+))}
+
+</div>
+)}
+
+
       
       </div>
 
 
-            <div className="relative">
-
-  <form
-    onSubmit={(e) => e.preventDefault()}
-    className="flex items-center border border-gray-200 rounded-full px-4 gap-2 py-2" >
-    <Search size={19} className="text-white" />
-
-    <input
-      type="search"
-      placeholder="Search dishes..."
-      value={search}
-      onChange={(e) => setSearch(e.target.value)}
-      className="w-full bg-transparent outline-none text-sm text-white placeholder:text-white"
-    />
-  </form>
-
-  {search.trim() && (
-    <div className="absolute top-full left-0 w-full bg-white/80 rounded-xl shadow-lg mt-2 z-50 ">
-
-      {filteredDishes.length > 0 ? (
-
-        filteredDishes.map((dish) => (
-          <div key={dish.id} className="p-3 border-b text-black">
-
-            <h3>{dish.name}</h3>
-            <p>{dish.category} - ₹{dish.price}</p>
-
-          </div>
-        ))
-
-      ) : (
-        <p className="p-3 text-black font-bold">No dishes found!</p>
-      )}
 
     </div>
-  )}
+    <nav></nav>
 
-</div>
-              
+     
 
-
-            <button
-            
-             onClick={()=> setISopen(!isOpen)}
-
-             className='w-11 h-11  text-white  rounded-xl  
-             flex items-center justify-center shrink-0 hover:bg-white/20 transition'
-             aria-label={isOpen ? 'close menu' :' open menu'}
-             aria-expanded={isOpen}
-            
-            >
-          
-           {isOpen ? <X size={25}/> : <Menu size={25}/>}
-          
-            </button>
-
-              </div>
-
-                   
-
-              <div className={`absolute top-full left-0 w-full  shadow-lg  transition-all duration-300  overflow-hidden${
-
-
-               isOpen 
-               ? "max-h-96 opacity-100 visible"
-                : "max-h-0 opacity-0 invisible"
-              }`}>
-        
-                <div className='max-w-7xl  mx-auto px-10 py-3 flex flex-col rounded-4xl '>
-
-
-                    {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                onClick={() => setISopen(false)}
-                className="py-4  z-40 md:text-[#972828] text-black  text-center hover:text-white hover:bg-[#280905] hover:backdrop-blur-md bg-white/70 backdrop-blur-lg  rounded-b-full font-extrabold transition duration-1000 hover:scale-105"
-              >
-                {link.name}
-              </a>
-            ))}
-
-                </div>
-            
-
-              </div>
-
-               
-      </div>
-
-
-       
-
-    </nav>
-
-
-
-          </>
-
+    </section>
   )
 }
 
