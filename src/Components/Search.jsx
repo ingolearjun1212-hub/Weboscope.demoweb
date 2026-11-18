@@ -26,61 +26,56 @@ const foods = [
 ]
 
 
-const [store,setstore] = useState(foods)
-const [Data,setData] = useState()
+const [Data,setData] = useState('')
 
 const getData = (e)=>{
-    console.log(e.target.value)
     setData(e.target.value)
 
 
 }
 
-     let filterout = store.filter((curvlaue)=>{
+    let filterout = foods.filter((curvlaue)=>{
 
     return(
-        curvlaue.name.toLowerCase().includes(Data) 
+        curvlaue.name.toLowerCase().includes(Data.toLowerCase())
     )
 })
   return (
-    <div className='w-[200px]   z-30 '>
+    <div className='relative z-30 min-w-0 max-w-[240px]  flex-1 lg:w-[240px] lg:flex-none'>
 
  <input
 
         type='text'
         placeholder='Type Here...'
         onChange={getData}
-        className='w-full   border-1 border-white 
-         outline-none rounded-full placeholder:text-white placeholder:text-sm px-2 py-2'
+        className='w-full border border-white bg-white/20 outline-none rounded-full placeholder:text-white placeholder:text-sm px-3 py-2'
         
         />
 
-        <div className=' flex  mt-10 justify-around hidden '>
-            <h3>Name</h3>
-            <h3>Price</h3>
-            <h3>Foods</h3>
-        </div>
+       
       
-     {
+     {Data.trim() && filterout.length > 0 && (
+        <div className='absolute left-0 top-full mt-2 w-full max-h-72 overflow-y-auto rounded-lg bg-white p-2 text-black shadow-lg'>
 
-          filterout.map((cur)=>{
+          {filterout.map((cur)=>{
 
            return(
-            <div className='flex justify-around '>
+            <div key={cur.name} className='flex items-center justify-between gap-2 border-b border-gray-200 p-2 last:border-0'>
                 <p className=' '>{cur.name}</p>
                 <p className=''>{cur.price}</p>
 
                 <img
                 
                 src={cur.image}
-                className=' w-[90px] rounded-2xl'
+                className='h-12 w-12 rounded-lg object-cover'
 
                 />
             </div>
            )
 
-          } )
-     }
+          } )}
+        </div>
+     )}
 
     </div>
   )
