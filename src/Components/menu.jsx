@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 const links = [
   ['Home', '/'],
   ['About', '/About'],
-  ['Menu', '/Menu'],
+  ['menu', '/menu'],
   ['Servises', '/Servises'],
   ['Gallery', '/Gallery'],
   ['Contact', '/Contact'],

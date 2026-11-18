@@ -2,7 +2,7 @@
 import React from 'react'
 import Logo from '../Components/Logo'
 import Search from '../Components/Search'
-import Menu from '../Components/Menu'
+import Menu from '../Components/menu'
 
 function Navbar() {
 
