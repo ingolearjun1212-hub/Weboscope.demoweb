@@ -17,24 +17,24 @@ function Hero() {
       className='absolute inset-0 h-full w-full object-cover'
         />
 
-      <div className='absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/10 ' />
+      <div className='  inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/10 ' />
 
-      <div className='absolute inset-0 z-10 flex items-center px-6 mt-44 sm:px-12 lg:px-20'>
-        <div className='max-w-3xl text-center sm:text-left'>
-          <p className='mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-amber-300 sm:text-sm'>
+      <div className=' absolute inset-0 z-20 flex  items-center  mb-72 lg:px-20'>
+        <div className='max-w-3xl text-center  sm:text-left'>
+          <p className='mb-2 text-2xl font-semibold uppercase tracking-[0.35em] text-amber-950 bg-white/30 backdrop-blur-xl '>
             A little taste of something special
           </p>
-          <h1 className='font-serif text-5xl font-medium leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-8xl'>
-            Made for <span className='italic text-amber-200'>memorable</span> moments.
+          <h1 className='font-serif text-5xl font-medium leading-[1.05] py-2 tracking-tight text-amber-800 bg-white/30 backdrop-blur-md sm:text-6xl lg:text-8xl'>
+            Made for <span className='italic text-amber-950'>memorable</span> moments.
           </h1>
-          <p className='mx-auto mt-6 max-w-xl text-base leading-7 text-white/85 sm:mx-0 sm:text-lg'>
+          <p className='mx-auto  max-w-xl text-base leading-7 px-2 text-black bg-white/60 mt-1 backdrop-blur-sm sm:mx-0 sm:text-lg'>
             Thoughtfully prepared food, warm hospitality, and a table worth coming back to.
           </p>
-          <div className='mt-8 flex flex-wrap justify-center gap-3 sm:justify-start'>
-            <Link to='/Menu' className='rounded-full bg-amber-950/50  px-6 py-3 text-sm font-semibold text-white transition hover:bg-black'>
+          <div className='mt-8 flex flex-wrap justify-center gap-3 sm:justify-start  '>
+            <Link to='/Menu' className='rounded-ee-2xl bg-white/30  px-6 py-3 text-sm font-semibold text-black backdrop-blur-lg transition hover:bg-black'>
               Explore the menu
             </Link>
-            <Link to='/Contact' className='rounded-full border border-white/70 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/15'>
+            <Link to='/Contact' className='rounded-es-2xl border bg-white/60 backdrop-blur-lg border-white/70 px-6 py-3 text-sm font-semibold text-black transition hover:bg-white/15'>
               Get in touch
             </Link>
           </div>

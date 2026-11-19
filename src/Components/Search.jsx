@@ -48,7 +48,7 @@ const getData = (e)=>{
         type='text'
         placeholder='Type Here...'
         onChange={getData}
-        className='w-full h-full border border-white bg-white/20 outline-none rounded-full placeholder:text-white placeholder:text-sm px-3 py-2'
+        className='w-full h-full border border-white bg-white/20 outline-none rounded-full placeholder:text-white  placeholder:text-xl px-3 py-2'
         
         />
 
