@@ -2,6 +2,7 @@ import React from 'react'
 
 import Navbar from '../Components/Navbar'
 import Hero from '../Components/Hero'
+import HAbout from '../Components/HAbout'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
     
       <Navbar/>
       <Hero/>
+      <HAbout/>
 </div>
   
       

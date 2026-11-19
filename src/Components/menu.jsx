@@ -27,7 +27,7 @@ const Menu = () => {
 
       <button
         type='button'
-        className='flex-none rounded-lg bg-black/90 px-2 py-1 text-2xl text-white lg:hidden'
+        className='flex-none rounded-lg bg-black px-2 py-1 text-2xl text-white lg:hidden'
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
         onClick={() => setOpen(!open)}
