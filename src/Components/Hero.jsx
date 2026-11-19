@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Hero() {
   return (
-    <div className='relative z-10 h-screen h-[100dvh] w-full overflow-hidden'>
+    <div className='relative z-10 h-screen h-[100dvh] w-full overflow-hidden '>
 
       <video
       
@@ -17,10 +17,10 @@ function Hero() {
       className='absolute inset-0 h-full w-full object-cover'
         />
 
-      <div className='  inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/10 ' />
+      <div className='  inset-0  ' />
 
-      <div className=' absolute inset-0 z-20 flex  items-center  mb-44 lg:px-20'>
-        <div className='max-w-3xl text-center  sm:text-left'>
+      <div className=' absolute inset-0 z-20 flex  items-center  mb-30 lg:px-20'>
+        <div className='max-w-3xl text-center bg-white/40 p-2 rounded-e-md sm:text-left'>
           <p className='mb-2 text-2xl font-semibold uppercase tracking-[0.35em] text-amber-950 bg-white/30 backdrop-blur-xl '>
             A little taste of something special
           </p>
