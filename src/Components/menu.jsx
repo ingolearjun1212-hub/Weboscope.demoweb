@@ -15,8 +15,8 @@ const Menu = () => {
 
   return (
     <div className='relative z-30'>
-      <nav className='hidden rounded-full bg-white/50 p-2 text-white shadow-md backdrop-blur-lg lg:block'>
-        <div className='flex items-center gap-2 rounded-full bg-black/50 p-2'>
+      <nav className='hidden rounded-full bg-white/50 p-2  text-white shadow-md backdrop-blur-lg lg:block md:h-20 '>
+        <div className='flex items-center gap-2 h-full rounded-full bg-black/50 p-2'>
           {links.map(([label, path]) => (
             <Link key={path} className='rounded-2xl p-2 transition hover:bg-black hover:font-bold hover:text-amber-500' to={path}>
               {label}
@@ -27,7 +27,7 @@ const Menu = () => {
 
       <button
         type='button'
-        className='flex-none rounded-lg bg-black/70 px-3 py-2 text-2xl text-white lg:hidden'
+        className='flex-none rounded-lg bg-black/70 px-2 py-1 text-2xl text-white lg:hidden'
         aria-label={open ? 'Close menu' : 'Open menu'}
         aria-expanded={open}
         onClick={() => setOpen(!open)}

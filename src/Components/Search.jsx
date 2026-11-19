@@ -41,14 +41,14 @@ const getData = (e)=>{
     )
 })
   return (
-    <div className='relative z-30 min-w-0 max-w-[240px]  flex-1 lg:w-[240px] lg:flex-none'>
+    <div className='relative z-30 min-w-0   flex-1 lg:w-[500px] md:w-[300px]  md:h-16 lg:flex-none'>
 
  <input
 
         type='text'
         placeholder='Type Here...'
         onChange={getData}
-        className='w-full border border-white bg-white/20 outline-none rounded-full placeholder:text-white placeholder:text-sm px-3 py-2'
+        className='w-full h-full border border-white bg-white/20 outline-none rounded-full placeholder:text-white placeholder:text-sm px-3 py-2'
         
         />
 

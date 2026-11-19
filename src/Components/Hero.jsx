@@ -19,7 +19,7 @@ function Hero() {
 
       <div className='absolute inset-0 bg-gradient-to-r from-black/75 via-black/35 to-black/10 ' />
 
-      <div className='absolute inset-0 z-10 flex items-center px-6 pt-1 sm:px-12 lg:px-20'>
+      <div className='absolute inset-0 z-10 flex items-center px-6 mt-44 sm:px-12 lg:px-20'>
         <div className='max-w-3xl text-center sm:text-left'>
           <p className='mb-4 text-xs font-semibold uppercase tracking-[0.35em] text-amber-300 sm:text-sm'>
             A little taste of something special
