@@ -5,7 +5,7 @@ const links = [
   ['Home', '/'],
   ['About', '/About'],
   ['menu', '/menu'],
-  ['Servises', '/Servises'],
+  ['Services', '/Services'],
   ['Gallery', '/Gallery'],
   ['Contact', '/Contact'],
 ]
